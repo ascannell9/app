@@ -28,8 +28,8 @@ except:
 
 #plt.figure(figsize = (15,10))
 #sns.countplot(data = period_,
-             x = 'orbital period',
-             palette = 'summer')
+            # x = 'orbital period',
+            # palette = 'summer')
 #plt.xticks(fontsize = 'small')
 #plt.title('Planet Orbital Periods in Earth Days')
 #plt.xlabel('Orbital Period')
