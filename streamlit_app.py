@@ -4,12 +4,20 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-st.header('Let\'s hope this works!')
-st.write('After numerous errors lets hope we get none')
 
-map_data = pd.DataFrame(np.random.randn(1000, 2) / [50, 50] + [50, -1], columns=['lat', 'lon'])
+st.header('Exoplanets')
+st.write('See data from every discovered exoplanet')
+st.write('Do you want to see this data?')
+if st.checkbox('Yes'):
+    exo = pd.read_csv('PS_2024.03.11_08.53.21.csv',skiprows=96)
+    exo.drop_duplicates(subset='pl_name', keep='last', inplace=True)
+    exo.reset_index(drop=True, inplace=True)
+    exo
 
-st.map(map_data)
+    
+if st.checkbox('No'):
+    st.write('Then why are you using this app?????')
+
 
 
 
