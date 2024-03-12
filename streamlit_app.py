@@ -13,7 +13,7 @@ if st.checkbox('Yes'):
     exo.drop_duplicates(subset='pl_name', keep='last', inplace=True)
     exo.reset_index(drop=True, inplace=True)
     exo
-else st.checkbox('No'):
+else:
     st.write('Then why are you using this app?????')
 
 
