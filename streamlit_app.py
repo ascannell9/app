@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 
 st.header('Exoplanets')
@@ -27,20 +28,20 @@ try:
 except:
     print('cannot do')
 
-#plt.figure(figsize = (15,10))
+plt.figure(figsize = (15,10))
 orb_per = sns.countplot(data = period_,
              x = 'orbital period',
              palette = 'summer')
-#plt.xticks(fontsize = 'small')
-#plt.title('Planet Orbital Periods in Earth Days')
-#plt.xlabel('Orbital Period')
-#plt.ylabel('Number of Planets')
-#plt.plot(4,1900, marker='o',color='grey',ms=5,label='Mercury')
-#plt.plot(6,250, marker='o',color='y',ms=19, label='Venus')
-#plt.plot(6.8,350, marker='o',color='b',ms=20, label='Earth')
-#plt.plot(7.2,350, marker='o',color='r',ms=10, label='Mars')
-#plt.legend(markerscale=0.65)
-#plt.show()
+plt.xticks(fontsize = 'small')
+plt.title('Planet Orbital Periods in Earth Days')
+plt.xlabel('Orbital Period')
+plt.ylabel('Number of Planets')
+plt.plot(4,1900, marker='o',color='grey',ms=5,label='Mercury')
+plt.plot(6,250, marker='o',color='y',ms=19, label='Venus')
+plt.plot(6.8,350, marker='o',color='b',ms=20, label='Earth')
+plt.plot(7.2,350, marker='o',color='r',ms=10, label='Mars')
+plt.legend(markerscale=0.65)
+plt.show()
 
 # Mercury = 88 days, Venus = 225 days, Earth = 365 days, Mars = 687 days , Jupiter = 4331 days
 
