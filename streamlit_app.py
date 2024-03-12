@@ -12,7 +12,7 @@ if st.checkbox('Yes'):
     exo = pd.read_csv('PS_2024.03.11_08.53.21.csv',skiprows=96)
     exo.drop_duplicates(subset='pl_name', keep='last', inplace=True)
     exo.reset_index(drop=True, inplace=True)
-    st.write(exo)
+    st.table(exo)
     st.write('You can assign yourself a new planet to move to with this random number generator')
     st.button('Random number generator')
     x = np.random.randint(5594)
