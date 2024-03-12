@@ -13,14 +13,14 @@ if st.checkbox('Yes'):
     exo.drop_duplicates(subset='pl_name', keep='last', inplace=True)
     exo.reset_index(drop=True, inplace=True)
     exo
+    st.write('You can assign yourself a new planet to move to with this random number generator')
+    st.button('Random number generator')
+    x = np.random.randint(5594)
+    st.write(f"you have been given planet {exo.loc[x]['pl_name']}")
 
 if st.checkbox('No'):    
     st.write('Then why are you using this app?????')
     
-st.write('You can assign yourself a new planet to move to with this random number generator')
-st.button('Random number generator')
-x = np.random.randint(5594)
-st.write(f"you have been given planet {exo.loc[x]['pl_name']}")
 
 
 
