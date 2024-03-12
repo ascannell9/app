@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 
 
-st.header('st.write')
-st.write('Hello World!')
+st.header('Exoplanets')
+st.write('This is a small dashboard hoping to analyse some of the fascinating aspects of all discovered exoplanets to date')
 
 exo = pd.read_csv('PS_2024.03.11_08.53.21.csv', skiprows=96)
 st.write(exo)
