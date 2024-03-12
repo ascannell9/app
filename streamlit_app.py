@@ -45,6 +45,6 @@ plt.show()
 
 # Mercury = 88 days, Venus = 225 days, Earth = 365 days, Mars = 687 days , Jupiter = 4331 days
 
-st.pyplot(orb_per.fig)
+st.pyplot(fig=orb_per)
 
 
