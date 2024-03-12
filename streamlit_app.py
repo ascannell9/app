@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import seaborn as sns
 
 
 st.header('Exoplanets')
@@ -27,9 +28,9 @@ except:
     print('cannot do')
 
 #plt.figure(figsize = (15,10))
-#sns.countplot(data = period_,
-            # x = 'orbital period',
-            # palette = 'summer')
+orb_per = sns.countplot(data = period_,
+             x = 'orbital period',
+             palette = 'summer')
 #plt.xticks(fontsize = 'small')
 #plt.title('Planet Orbital Periods in Earth Days')
 #plt.xlabel('Orbital Period')
@@ -42,6 +43,7 @@ except:
 #plt.show()
 
 # Mercury = 88 days, Venus = 225 days, Earth = 365 days, Mars = 687 days , Jupiter = 4331 days
-st.barchart(period_['orbital period'])
+
+st.pyplot(orb_per.fig)
 
 
