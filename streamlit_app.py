@@ -21,8 +21,8 @@ if select=='Yes':
     x = np.random.randint(5594)
     st.write(f"You have been selected to go to planet {exo.loc[x]['pl_name']}")
     st.write(f"Here are some details about {exo.loc[x]['pl_name']:}")
-    st.table(f"{exo.loc[x]}")
-else:   
+    st.table(exo.loc[x])
+elif select=='No':   
     st.write('Then why are you using this app?????')
     
 
